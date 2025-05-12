@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Bouchra | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Bouchra</div>
+        <div class="theme-toggle">
+            <i class="fa-regular fa-moon"></i>
+        </div>
+    </header>
+
+    <!-- Landing Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-intro">Hello, I'm</p>
+            <h1 class="hero-title">Bouchra Bendiouri</h1>
+            <p class="hero-role">Fullstack Developer</p>
+            <div class="hero-buttons">
+                <a href="Bouchra'scv.pdf" download="Bouchra_CV.pdf" class="btn btn-outline">Resume</a>
+                <a href="#about" class="btn btn-filled">About</a>
+            </div>
+            <img src="avatar.png" alt="Avatar" class="hero-avatar">
+        </div>
+
+        <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/bouchra-bendiouri-361a29201/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/bouchrabendiouri"><i class="fab fa-github" target="_blank"></i></a>
+        </div>
+        <a href="#about" class="scroll-down">
+            <svg class="mouse-icon" viewBox="0 0 40 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.5" y="1.5" width="37" height="51" rx="18.5" stroke="currentColor" stroke-width="3" />
+                <rect x="18" y="10" width="4" height="12" rx="2" fill="currentColor" />
+            </svg>
+            <span class="scroll-down-text">Scroll Down</span>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-title">
+            <span class="about-intro">My Intro</span>
+            <h2>About <span class="accent">Me</span></h2>
+        </div>
+        <div class="about-content">
+            <div class="about-photo-container">
+                <img src="profile.jpeg" alt="About Photo" class="about-photo">
+            </div>
+            <div class="about-description">
+                <!-- This div and its content are moved inside .about-content -->
+                <p>
+                    I’m Bouchra, a Full Stack Web Development student at 1337 Coding<br> School (UM6P) with a focus on front-end development using HTML, CSS, <br> and vanilla JavaScript. I enjoy building responsive interfaces from scratch <br> and am also comfortable handling back-end logic to ensure smooth <br> client-server communication. </p>
+
+                <a href="mailto:bendiouribouchra@gmail.com" class="btn btn-filled">Contact Me</a>
+            </div>
+        </div> <!-- This now correctly closes .about-content -->
+        <!-- The extra </div> that was here has been removed -->
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="experience-title">
+            <span class="experience-intro">My Abilities</span>
+            <h2>My <span class="accent">Experience</span></h2>
+        </div>
+        <div class="experience-content">
+            <div class="experience-card">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            HTML
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="85%"></div>
+                            </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            CSS
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="85%"></div>
+                            </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            JavaScript
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="60%"></div>
+                            </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            Figma
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="80%"></div>
+                            </div>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="experience-card">
+                <h3>Backend & Tools</h3>
+                <ul>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            C++
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="85%"></div>
+                            </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            C
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="85%"></div>
+                            </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            NodeJS
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="40%"></div>
+                            </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            Git
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="50%"></div>
+                            </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            Bash
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="60%"></div>
+                            </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            Docker
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="60%"></div>
+                            </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            Postgres
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="60%"></div>
+                            </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            Django
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="70%"></div>
+                            </div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span class="skill-details">
+                            Postman
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" data-width="50%"></div>
+                            </div>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-title">
+            <span class="portfolio-intro">My Portfolio</span>
+            <h2>Recent <span class="accent">Works</span></h2>
+        </div>
+
+        <div class="portfolio-grid">
+            <!-- WBS Project -->
+            <div class="portfolio-card">
+                <img src="irc.svg" alt="IRC Project Screenshot">
+                <div class="portfolio-card-title">IRC</div>
+
+                <div class="portfolio-card-desc">
+                    Built a custom IRC server in C++ with real-time chat, user authentication, and channel management using non-blocking sockets and select().
+                </div>
+                <a href="https://github.com/bouchrabendiouri/ft_irc" class="portfolio-demo" target="_blank">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <!-- Inception Project -->
+            <div class="portfolio-card">
+                <img src="inception.svg" alt="Inception Project Screenshot">
+                <div class="portfolio-card-title">Inception</div>
+
+                <div class="portfolio-card-desc">
+                    Sets up a web infrastructure using Docker and Docker Compose. Integrates WordPress, MariaDB, and Nginx.
+                </div>
+                <a href="https://github.com/bouchrabendiouri/Inception" class="portfolio-demo" target="_blank">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <!-- ePong Project -->
+            <div class="portfolio-card">
+                <img src="trancendance.svg" alt="Pong Project Screenshot">
+                <div class="portfolio-card-title">Ft_trancendance</div>
+
+                <div class="portfolio-card-desc">
+                    Built the front-end and back-end of a real-time chat feature for a multiplayer Pong game using Django Channels, JavaScript, HTML, and CSS.
+                </div>
+                <a href="https://github.com/bouchrabendiouri/ft_trancendence" class="portfolio-demo" target="_blank">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <!-- Removed old demo cards and the What I Offer section above -->
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-title-container">
+            <span class="contact-intro">Get in touch</span>
+            <h2>Contact <span class="accent">Me</span></h2>
+        </div>
+
+        <div class="contact-container">
+            <!-- Left Column: Talk to me -->
+            <div class="contact-info">
+                <h3 class="contact-subtitle">Talk to me</h3>
+
+                <div class="contact-info-card">
+                    <i class="fa-solid fa-envelope contact-info-icon"></i>
+                    <h4 class="contact-info-title">Email</h4>
+                    <span class="contact-info-detail">bendiouribouchra@gmail</span>.com</span>
+                    <a href="mailto:bendiouribouchra@gmail.com" class="contact-info-button">
+                        Write Me <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="contact-info-card">
+                    <i class="fa-brands fa-whatsapp contact-info-icon"></i>
+                    <h4 class="contact-info-title">WhatsApp</h4>
+                    <span class="contact-info-detail">+212 7 65 50 47 53</span>
+                    <a href="https://wa.me/+212765504753" target="_blank" class="contact-info-button">
+                        Write Me <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="contact-info-card">
+                    <i class="fa-brands fa-x-twitter contact-info-icon"></i> <!-- Or fa-brands fa-x-twitter -->
+                    <h4 class="contact-info-title">X</h4>
+                    <span class="contact-info-detail">@Bouchrabendiou1</span>
+                    <a href="https://twitter.com/@Bouchrabendiou1" target="_blank" class="contact-info-button">
+                        Write Me <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Write Me your Message -->
+            <div class="contact-form-container">
+                <h3 class="contact-subtitle">Write Me your Message</h3>
+                <form action="#" class="contact-form">
+                    <div class="contact-form-div">
+                        <label for="name" class="contact-form-tag">Name</label>
+                        <input type="text" name="name" id="name" required placeholder="Enter name" class="contact-form-input">
+                    </div>
+
+                    <div class="contact-form-div">
+                        <label for="email" class="contact-form-tag">Mail</label>
+                        <input type="email" name="email" id="email" required placeholder="Enter email" class="contact-form-input">
+                    </div>
+
+                    <div class="contact-form-div contact-form-area">
+                        <label for="message" class="contact-form-tag">Message</label>
+                        <textarea name="message" id="message" required placeholder="Write your Message" class="contact-form-input"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-filled contact-send-button">
+                        Send Message <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <h1 class="footer-title">Bouchra</h1>
+            <ul class="footer-nav-list">
+                <li><a href="#" class="footer-nav-link">Home</a></li>
+                <li><a href="#about" class="footer-nav-link">About</a></li>
+                <li><a href="#experience" class="footer-nav-link">Skills</a></li>
+                <li><a href="#portfolio" class="footer-nav-link">Work</a></li>
+                <li><a href="#contact" class="footer-nav-link">Contact</a></li>
+            </ul>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/bouchra.bendiouri.315" target="_blank" class="footer-social-link">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/BouchraBendiou1" target="_blank" class="footer-social-link">
+                    <i class="fa-brands fa-x-twitter"></i> <!-- This is the correct icon for the new X logo -->
+                </a>
+                <a href="https://www.linkedin.com/in/bouchra-bendiouri-361a29201/" target="_blank" class="footer-social-link">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/bouchra_bend_/" target="_blank" class="footer-social-link">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Navigation (Floating) -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-btn active"><i class="fa-solid fa-house"></i></a>
+        <a href="#about" class="nav-btn"><i class="fa-solid fa-user"></i></a>
+        <a href="#experience" class="nav-btn"><i class="fa-solid fa-briefcase"></i></a>
+        <a href="#portfolio" class="nav-btn"><i class="fa-solid fa-layer-group"></i></a>
+    </nav>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

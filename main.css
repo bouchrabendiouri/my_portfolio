@@ -1,0 +1,1175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg-main: rgb(9, 16, 27);
+    --bg-card: rgb(9, 16, 27);
+    --bg-card-alt: rgb(9, 16, 27);
+    --text-main: rgb(179, 184, 194);
+    --text-dark: #232946;
+    --accent: rgb(181, 166, 242);
+    --accent-hover: rgb(164, 146, 235);
+    --border-radius: 18px;
+    --transition: 0.2s cubic-bezier(.4, 0, .2, 1);
+
+    --body-font: "Poppins", sans-serif;
+    --biggest-font-size: 1.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+    --tiny-font-size: 0.625rem;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--body-font);
+    margin: 0;
+    min-height: 100vh;
+    letter-spacing: 0.01em;
+    font-size: var(--normal-font-size);
+}
+
+
+body.light-mode {
+    --bg-main: rgb(252, 252, 255);
+    --bg-card: rgb(233, 233, 233);
+    --bg-card-alt: rgb(233, 233, 233);
+    --text-main: rgb(33, 29, 58);
+    --text-light: rgb(71, 68, 89);
+    --accent: rgb(181, 166, 242);
+    --accent-hover: rgb(164, 146, 235);
+}
+
+/* Example for button outlines if not using variables */
+body.light-mode .btn-outline {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+body.light-mode .btn-outline:hover {
+    background-color: var(--accent);
+    color: var(--text-dark);
+    /* Text color on hover */
+}
+
+/* Example for scrollbar in light mode */
+body.light-mode::-webkit-scrollbar {
+    background: var(--accent);
+    /* Or a slightly darker light gray */
+}
+
+body.light-mode::-webkit-scrollbar-thumb {
+    background: var(--accent);
+}
+
+body.light-mode::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
+}
+
+body.light-mode .scroll-down,
+body.light-mode .scroll-down-text,
+body.light-mode .scroll-down i,
+body.light-mode .scroll-down {
+    color: var(--text-dark);
+    fill: var(--text-dark);
+}
+
+
+
+body.light-mode * {
+    scrollbar-color: var(--accent) var(--accent-hover);
+}
+
+/* Example for skill bar if colors are hardcoded */
+body.light-mode .skill-bar {
+    background: #E9ECEF;
+    /* Lighter background for skill bar */
+    box-shadow: 0 0 16px 0 rgba(100, 100, 150, 0.1) inset;
+    /* Lighter shadow */
+}
+
+body.light-mode .skill-bar-fill {
+    background: var(--accent);
+    /* Use accent for fill */
+    box-shadow: 0 0 16px 2px var(--accent-hover) inset;
+}
+
+body.light-mode .hero-socials a {
+    background: rgb(233, 233, 233);
+    color: var(--text-dark);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+body.light-mode .hero-socials a:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+body.light-mode .hero-socials::after {
+    background: var(--accent);
+}
+
+/* Ensure your theme toggle icon color also adapts */
+.theme-toggle i {
+    color: var(--text-main);
+    /* Or var(--accent) if you prefer */
+    font-size: 1.5rem;
+    /* Adjust size as needed */
+    cursor: pointer;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3vw 0 3vw;
+    background: transparent;
+}
+
+
+.logo {
+    position: absolute;
+    font-size: 0.9rem;
+    left: 16vw;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+.theme-toggle {
+    position: absolute;
+    right: 16vw;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 90vh;
+    position: relative;
+    padding-top: 2rem;
+}
+
+.hero-content {
+    text-align: center;
+    align-items: center;
+}
+
+.hero-intro {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.hero-avatar {
+
+    margin: 3rem auto 0 auto;
+    display: block;
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+}
+
+
+.hero-title {
+    font-size: var(--biggest-font-size);
+    font-weight: 800;
+    color: var(--accent);
+    margin: 0.2rem 0 0.5rem 0;
+    letter-spacing: 0.03em;
+}
+
+.hero-role {
+    font-size: var(--h2-font-size);
+    color: var(--text-main);
+    margin-bottom: 2rem;
+    font-weight: var(--font-medium);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.7em 2.2em;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition), border var(--transition);
+    text-decoration: none;
+    outline: none;
+}
+
+.btn-filled {
+    background: var(--accent);
+    color: var(--text-dark);
+    border: 2px solid var(--accent);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+.btn-filled:hover,
+.btn-outline:hover {
+    background: var(--accent-hover);
+    color: var(--text-dark);
+    border: 2px solid var(--accent-hover);
+}
+
+
+
+
+.hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-socials {
+    position: absolute;
+    left: 16vw;
+    top: 78%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.hero-socials a {
+    color: var(--accent);
+    background: var(--text-dark);
+    border-radius: 12px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: background var(--transition), color var(--transition);
+    box-shadow: none;
+}
+
+.hero-socials::after {
+    content: "";
+    display: block;
+    width: 1.5px;
+    height: 32px;
+    background: var(--accent);
+    margin-top: 8px;
+    border-radius: 1px;
+}
+
+.hero-socials a:hover {
+    background: var(--accent);
+    color: var(--bg-main);
+}
+
+.scroll-down {
+    position: absolute;
+    right: 16vw;
+    top: 78%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--accent);
+    font-size: 0.9rem;
+    gap: 0.01rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    /* Remove writing-mode for new layout */
+    writing-mode: unset;
+    text-orientation: unset;
+    text-decoration: none;
+}
+
+.scroll-down .mouse-icon {
+    width: 18px;
+    height: 34px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.scroll-down-text {
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: var(--body-font);
+    font-weight: var(--smaller-font-size);
+}
+
+.scroll-down i {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+/* About Section */
+.about {
+    padding: 4rem 0 2rem 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+}
+
+.about-title .about-intro {
+    color: var(--text-main);
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.about-title h2 {
+    color: var(--accent);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0 0;
+}
+
+.about-title .accent {
+    color: var(--accent);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    align-items: center;
+    /* Vertically center the photo and description blocks */
+}
+
+.about-photo-container {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.about-photo {
+    width: 280px;
+    height: 280px;
+    margin-left: 8rem;
+    border-radius: 30px;
+    background: var(--bg-card-alt);
+    box-shadow: 0 4px 24px rgba(251, 185, 182, 0.10);
+}
+
+.about-description {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.6rem;
+    margin-top: 0;
+    margin-left: 1rem;
+    min-width: 0;
+}
+
+
+
+.about-description p {
+    color: var(--text-main);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.about-description .btn {
+    align-self: flex-start;
+    font-size: 0.9rem;
+}
+
+/* Experience Section */
+.experience {
+    padding: 4rem 0 2rem 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.experience-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.experience-title .experience-intro {
+    color: var(--text-main);
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.experience-title h2 {
+    color: var(--accent);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0 0;
+}
+
+.experience-title .accent {
+    color: var(--accent);
+}
+
+.experience-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.experience-card {
+    background: var(--bg-card-alt);
+    border-radius: var(--border-radius);
+    padding: 2rem 2.5rem;
+    min-width: 350px;
+    /* Increased min-width to better accommodate two columns of skills */
+    color: var(--text-main);
+    box-shadow: 0 2px 12px rgba(251, 185, 182, 0.08);
+}
+
+.experience-card h3 {
+    color: var(--accent);
+    font-size: var(--h2-font-size);
+    margin-bottom: 1.5rem;
+    /* Slightly increased margin for better spacing */
+    font-weight: var(--font-semibold);
+    text-align: center;
+    /* Center the card titles like "Frontend Development" */
+}
+
+.experience-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1.5rem;
+}
+
+.experience-card li {
+    margin-bottom: 1rem;
+    font-size: var(--normal-font-size);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    margin-top: 0.3em;
+}
+
+/* Add this for the new structure */
+.skill-details {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.level {
+    display: block;
+    color: var(--text-main);
+    font-size: var(--small-font-size);
+    margin-left: 0;
+    margin-top: 0.1rem;
+    opacity: 0.8;
+}
+
+
+
+
+/* Services Section */
+.services {
+    padding: 4rem 0 2rem 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.services-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.services-title .services-intro {
+    color: var(--text-main);
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.services-title h2 {
+    color: var(--accent);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0 0;
+}
+
+.services-title .accent {
+    color: var(--accent);
+}
+
+.services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.service-card {
+    background: var(--bg-card-alt);
+    border-radius: var(--border-radius);
+    padding: 2.2rem 2.5rem;
+    min-width: 260px;
+    color: var(--text-main);
+    box-shadow: 0 2px 12px rgba(251, 185, 182, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.service-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.service-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color var(--transition);
+}
+
+.service-link:hover {
+    color: var(--accent-hover);
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 4rem 0 2rem 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.portfolio-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.portfolio-title .portfolio-intro {
+    color: var(--accent);
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.portfolio-title h2 {
+    color: var(--accent);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0 0;
+}
+
+.portfolio-title .accent {
+    color: var(--accent);
+}
+
+.portfolio-filters {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.filter {
+    background: var(--bg-card-alt);
+    color: var(--accent);
+    border: none;
+    border-radius: 8px;
+    padding: 0.5em 1.5em;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition);
+}
+
+.filter.active,
+.filter:hover {
+    background: var(--accent);
+    color: var(--bg-main);
+}
+
+/* Change portfolio-grid to flex for independent card sizing */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    max-width: 900px;
+    /* Optional for testing */
+    gap: 0.5rem;
+    margin: 0 auto;
+}
+
+.portfolio-card {
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 12px rgba(251, 185, 182, 0.08);
+    background-color: var(--bg-card);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.portfolio-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 1.2rem 1.2rem 0.5rem 1.2rem;
+}
+
+.portfolio-card-desc {
+    font-size: 0.9rem;
+    /* Adjust as needed */
+    color: var(--text-light);
+    /* Or var(--text-main) depending on desired contrast */
+    margin: 0.5rem 1.2rem 1rem 1.2rem;
+    /* Top, Right, Bottom, Left */
+    line-height: 1.5;
+    /* Improves readability */
+    flex-grow: 1;
+    /* Allows the description to take available space if card height varies */
+}
+
+.portfolio-demo {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0 1.2rem 1.2rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color var(--transition);
+}
+
+.portfolio-demo:hover {
+    color: var(--accent-hover);
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 0 6rem 0;
+    /* Added more bottom padding before nav */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-title-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-intro {
+    color: var(--text-main);
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.contact-title-container h2 {
+    color: var(--accent);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0 0;
+}
+
+.contact-container {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    /* Allow wrapping on smaller screens */
+}
+
+.contact-subtitle {
+    font-size: var(--h2-font-size);
+    color: var(--text-main);
+    /* Changed from accent to main for subtitle */
+    font-weight: var(--font-semibold);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Left Column: Talk to me */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    /* Minimum width before wrapping */
+    max-width: 430px;
+    /* Maximum width */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-info-card {
+    background: var(--bg-card-alt);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(251, 185, 182, 0.08);
+}
+
+.contact-info-icon {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+
+.contact-info-title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+}
+
+.contact-info-detail {
+    font-size: var(--small-font-size);
+    color: var(--text-main);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.contact-info-button {
+    font-size: var(--small-font-size);
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color var(--transition);
+}
+
+.contact-info-button:hover {
+    color: var(--accent-hover);
+}
+
+.contact-info-button i {
+    font-size: 0.9em;
+    /* Relative to button font size */
+    transition: transform 0.2s ease-in-out;
+}
+
+.contact-info-button:hover i {
+    transform: translateX(3px);
+}
+
+
+/* Right Column: Write Me your Message */
+.contact-form-container {
+    flex: 1.5;
+    /* Give more space to the form */
+    min-width: 300px;
+    /* Minimum width before wrapping */
+    max-width: 430px;
+}
+
+.contact-form {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+.contact-form-div {
+    position: relative;
+    background-color: var(--bg-card-alt);
+    /* Match card background */
+    border: 1px solid var(--accent);
+    /* Accent border for inputs */
+    border-radius: 12px;
+    /* Rounded corners for inputs */
+    padding: 0.75rem 1rem;
+}
+
+.contact-form-tag {
+    position: absolute;
+    top: -0.75rem;
+    /* Position label above the input field */
+    left: 1rem;
+    font-size: var(--small-font-size);
+    padding: 0 0.25rem;
+    background-color: var(--bg-main);
+    /* Match main background to "cut" the border */
+    color: var(--text-main);
+    z-index: 1;
+}
+
+.contact-form-input {
+    width: 100%;
+    background: none;
+    color: var(--text-main);
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    padding: 0.25rem 0;
+    /* Minimal padding as div handles most */
+}
+
+.contact-form-input::placeholder {
+    color: rgba(179, 184, 194, 0.6);
+    /* Lighter placeholder */
+}
+
+.contact-form-area {
+    height: 24.5rem;
+    /* Taller for textarea */
+}
+
+.contact-form-area textarea {
+    height: 100%;
+    resize: none;
+    /* Disable textarea resize */
+}
+
+.contact-send-button {
+    align-self: flex-start;
+    /* Align button to the left */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Footer Section */
+.footer {
+    background-color: var(--accent);
+    /* Or a slightly different shade like var(--bg-card) */
+    padding: 6rem 0 12rem;
+    /* Adjust padding as needed, less bottom padding if using fixed bottom-nav */
+    text-align: center;
+    border-top: 1px solid rgba(181, 166, 242, 0.1);
+    /* Subtle top border */
+}
+
+.footer-container {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-title {
+    font-size: var(--h1-font-size);
+    color: var(--text-dark);
+    font-weight: var(--font-semibold);
+    margin: 0;
+}
+
+.footer-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+    justify-content: center;
+}
+
+.footer-nav-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: var(--normal-font-size);
+    transition: color var(--transition);
+}
+
+.footer-nav-link:hover {
+    color: var(--text-light);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social-link {
+    font-size: 1.25rem;
+    color: var(--accent);
+    background-color: var(--text-dark);
+    /* Subtle background */
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    /* Slightly rounded squares */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.footer-social-link:hover {
+    background-color: var(--accent);
+    color: var(--accent-hover);
+}
+
+
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    left: 50%;
+    bottom: 2.5rem;
+    transform: translateX(-50%);
+    background: var(--bg-card-alt);
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(251, 185, 182, 0.10);
+    display: flex;
+    gap: 2.2rem;
+    padding: 0.7rem 2.2rem;
+    z-index: 100;
+}
+
+.nav-btn {
+    color: var(--accent);
+    font-size: 1.3rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 12px;
+    transition: background var(--transition), color var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn.active,
+.nav-btn:hover {
+    background: var(--accent);
+    color: var(--bg-main);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+
+    .about-content,
+    .experience-content,
+    .services-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-photo-container,
+    .about-description,
+    .about-cards {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 1.2rem 1rem 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-image-arch {
+        width: 150px;
+        height: 180px;
+    }
+
+    .about-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about-content,
+    .experience-content,
+    .services-cards {
+        gap: 1.2rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-nav {
+        gap: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg-main);
+}
+
+.skill-bar {
+    width: 100px;
+    height: 8px;
+    background: rgb(252, 253, 255);
+    border-radius: 20px;
+    margin-top: 0.4em;
+    box-shadow: 0 0 16px 0 rgb(50, 34, 113) inset;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 0 16px 2px var(--accent) inset;
+    width: 0;
+    /*transition: width 1.2s cubic-bezier(.4, 0, .2, 1);
+    */
+}
+
+
+
+.portfolio-details {
+    margin: 0 1.2rem 0.8rem 1.2rem;
+    font-size: 0.75rem;
+    color: var(--text-main);
+    border-radius: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.see-more-summary {
+    cursor: pointer;
+    color: var(--accent);
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 1.2rem 0 0.5rem 0;
+    transition: color var(--transition);
+}
+
+.see-more-text {
+    font-size: 0.813rem;
+    /* Adjust this for the text size */
+    font-weight: 500;
+    color: var(--accent);
+}
+
+.see-more-icon {
+    width: 0.813em;
+    height: 0.813em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.3em;
+    transition: transform 0.2s;
+    /* If your SVG is black, use filter to match the accent color: */
+    filter: brightness(0) saturate(100%) invert(73%) sepia(13%) saturate(1167%) hue-rotate(207deg) brightness(98%) contrast(92%);
+}
+
+
+
+.see-more-summary::after {
+    display: none;
+    /* Remove the CSS arrow */
+}
+
+.see-more-icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.3em;
+    transition: transform 0.2s;
+}
+
+
+
+.see-more-summary::after {
+    display: inline-block;
+    margin-left: 0.4em;
+    width: 0.1em;
+    height: 0.1em;
+    border-right: 2.5px solid var(--accent);
+    border-bottom: 2.5px solid var(--accent);
+    transform: rotate(-45deg);
+    transition: transform 0.2s;
+    border-radius: 1px;
+}
