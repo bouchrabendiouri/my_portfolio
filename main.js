@@ -203,3 +203,7 @@ themeButton.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark');
     }
 });
+
+setTimeout(() => {
+    document.body.classList.remove('loading');
+}, 0);
